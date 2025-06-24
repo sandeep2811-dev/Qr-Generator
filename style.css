@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+.container{
+
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap:10px;
+    
+
+}
+.input{
+    height: 50px;
+    border-radius:10px;
+    width: 550px;
+
+  
+}
+.submit{
+    height: 50px;
+    width:100px;
+    border-radius:10px;
+}
+h1{
+    color:whitesmoke;
+}
+.para{
+    color:whitesmoke;
+    text-align: center;
+}
+.head{
+    padding-top:20px;
+}
+@media(max-width:600px) {
+
+    .input{
+    height: 50px;
+    border-radius:10px;
+    width: 250px;
+
+  
+}
+.submit{
+    height: 50px;
+    width:100px;
+    border-radius:10px;
+}
+    
+}
