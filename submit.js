@@ -6,22 +6,26 @@ import path,{ dirname } from "path";
 import { fileURLToPath } from "url";
 const _dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-
+app.use(express.static("public"));
+app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
+
 app.get("/",(req,res )=> {
     res.sendFile(_dirname + "/index.html");
 });
 app.post("/submit",(req,res)=>{
     const URL = req.body.url;
+    if(!URL){
+        res.status(404).send("Erorr: Resource not found");
+    }
+    else{
     console.log(URL);
 
 
     const qr_svg = qr.image(URL, { type: "png" });
-    qr_svg.pipe(fs.createWriteStream(_dirname+"/qr_img.png"));
-    res.send('<center><img src="./qr_img.png" height="500vh" width="500"><h2>Qr-code Generated</h2><form action="/" method="get"><button type="submit" style="border-radius:5px; height:50px;width:150px;"><h3>Back</h3></button></form><center>');
-
-
-
+    qr_svg.pipe(fs.createWriteStream(_dirname+"/public"+"/qr_img.png"));
+    res.render("index.ejs")
+    }
 });
 
 

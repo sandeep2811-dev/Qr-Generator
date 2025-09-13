@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr-code</title>
+    <style>
+        body{
+            background-color: black;
+            color:chocolate;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            max-height: 100vh;
+            padding-left: 340px;
+            padding-top: 100px;
+            gap:30px;
+
+
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight:bolder;
+            
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: chocolate;
+            border: 1px solid chocolate;
+            border-radius: 10px;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            gap:15px;
+            padding-left: 560px;
+            padding-top: 20px;
+        }
+        /* for responsive */
+        @media(max-width:600px){
+            h1{
+                font-size:larger;
+            }
+            .container{
+                padding-left: 50px;
+            }
+            .buttons{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding-left: 200px;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your QR Code Is Generated Please Download It.</h1>
+        <img src="/qr_img.png" alt="QR Code">
+       
+    </div>
+    <div class="buttons">
+        <button><a href="/">Back</a></button>
+        <button><a href="/public/qr_img.png" download="qr_img.png">Download</a></button>
+    </div>
+</body>
+</html>
