@@ -8,17 +8,17 @@
     "start": "node submit.js"
   },
   "engines": {
-    "node":"18.x"
+    "node": "18.x"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "qr-image": "^3.2.0"
   },
-  "devDependencies": {},
   "description": ""
 }
