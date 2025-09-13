@@ -37,6 +37,11 @@ Qr-Generator/
 
 ---
 
+## **🔗 Live Demo**
+Check out the live version here: [QR Code Generator](https://qr-generator-agt1.onrender.com)
+
+
+
 ## **🚀 Installation & Setup**
 
 1. **Clone the repository**  
