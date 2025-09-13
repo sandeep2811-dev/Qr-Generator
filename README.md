@@ -41,4 +41,6 @@ Qr-Generator/
 
 1. **Clone the repository**  
    ```bash
+         https://github.com/sandeep2811-dev/Qr-Generator.git
+   
    
